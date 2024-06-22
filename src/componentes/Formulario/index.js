@@ -4,18 +4,10 @@ import CampoTexto from "../CampoTexto"
 import ListaSuspensa from "../ListaSuspensa"
 import './Formulario.css'
 
-const Formulario = (props) => {
-    const times = [
-        "Programação",
-        "Front-End",
-        "Data Science",
-        "Devops",
-        "UX e Design",
-        "Mobile",
-        "Inovação e Gestão"
-    ]
+const Formulario = (props) => {  
+    const times = props.times
     
-    const [nome, setNome] = useState('');
+    const[nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
     const [time, setTime] = useState('');
@@ -23,6 +15,11 @@ const Formulario = (props) => {
     const aoSalvar = (event) => {
         event.preventDefault()
         props.aoColaboradorCadastrado({nome, cargo, imagem, time})
+
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
