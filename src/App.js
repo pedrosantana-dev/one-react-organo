@@ -16,7 +16,26 @@ function App() {
         { nome: "Inovação e Gestão", corPrimaria: "#ff8a29", corSecundaria: "#FFEEDF" },
     ]
 
-	const [colaboradores, setColaboradores] = useState([])
+	const [colaboradores, setColaboradores] = useState([
+		{
+			nome: 'Pedro Santana',
+			cargo: 'Back-End Developer',
+			imagem: 'https://github.com/pedrosantana-dev.png',
+			time: 'Programação'
+		},
+		{
+			nome: 'Noble Majo',
+			cargo: 'Full Stack Developer',
+			imagem: 'https://github.com/NobleMajo.png',
+			time: 'Programação'
+		},
+		{
+			nome: 'Asaolu Elijah',
+			cargo: 'Full Stack Developer',
+			imagem: 'https://github.com/AsaoluElijah.png',
+			time: 'Programação'
+		}
+	])
 
 	const aoNovoColaboradorAdicionado = (colaborador) => {
 		debugger
