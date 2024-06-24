@@ -1,4 +1,5 @@
 .colaborador {
+    position: relative;
     width: 280px;
 }
 
@@ -29,4 +30,11 @@
 }
 .colaborador .rodape h5 {
     color: #000;
+}
+
+.deletar {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
 }
