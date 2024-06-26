@@ -3,137 +3,183 @@ import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import Rodape from './componentes/Rodape';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
 	const [times, setTimes] = useState([
-        { nome: "Programação", cor: "#57c278" },
-        { nome: "Front-End", cor: "#82CFFA" },
-        { nome:"Data Science", cor: "#A6D157" },
-        { nome: "Devops", cor: "#E06B69" },
-        { nome: "UX e Design", cor: "#db6ebf" },
-        { nome: "Mobile", cor: "#ffba05" },
-        { nome: "Inovação e Gestão", cor: "#ff8a29" },
+        { id: uuidv4(), nome: "Programação", cor: "#57c278" },
+        { id: uuidv4(), nome: "Front-End", cor: "#82CFFA" },
+        { id: uuidv4(), nome: "Data Science", cor: "#A6D157" },
+        { id: uuidv4(), nome: "Devops", cor: "#E06B69" },
+        { id: uuidv4(), nome: "UX e Design", cor: "#db6ebf" },
+        { id: uuidv4(), nome: "Mobile", cor: "#ffba05" },
+        { id: uuidv4(), nome: "Inovação e Gestão", cor: "#ff8a29" },
     ])
 
 	const [colaboradores, setColaboradores] = useState([
 		{
+			id: uuidv4(),
 			nome: 'Pedro Santana',
 			cargo: 'Back-End Developer',
 			imagem: 'https://github.com/pedrosantana-dev.png',
-			time: 'Programação'
+			timeId: times[0].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Noble Majo',
 			cargo: 'Full Stack Developer',
 			imagem: 'https://github.com/NobleMajo.png',
-			time: 'Programação'
+			timeId: times[0].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Asaolu Elijah',
 			cargo: 'Full Stack Developer',
 			imagem: 'https://github.com/AsaoluElijah.png',
-			time: 'Programação'
+			timeId: times[0].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Amauri Jr',
 			cargo: 'Full Stack Developer',
 			imagem: 'https://randomuser.me/api/portraits/men/11.jpg',
-			time: 'Front-End'
+			timeId: times[1].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Gustavo Ferraz',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/men/1.jpg',
-			time: 'UX e Design'
+			timeId: times[1].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Peter Ferraz',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/men/12.jpg',
-			time: 'Front-End'
+			timeId: times[1].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Fred',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/men/51.jpg',
-			time: 'Front-End'
+			timeId: times[2].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Barbara',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/women/61.jpg',
-			time: 'UX e Design'
+			timeId: times[2].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Taina',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/women/11.jpg',
-			time: 'Mobile'
+			timeId: times[2].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Jaine',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/women/51.jpg',
-			time: 'Mobile'
+			timeId: times[3].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Patience',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/women/21.jpg',
-			time: 'Mobile'
+			timeId: times[3].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Gustavo Ferraz',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/women/31.jpg',
-			time: 'Inovação e Gestão'
+			timeId: times[3].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Galha',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/women/41.jpg',
-			time: 'Inovação e Gestão'
+			timeId: times[4].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Natasha',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/women/51.jpg',
-			time: 'Inovação e Gestão'
+			timeId: times[4].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Miguel',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/men/32.jpg',
-			time: 'Devops'
+			timeId: times[4].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Walter',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/men/42.jpg',
-			time: 'Devops'
+			timeId: times[5].id
 		},
 		{
+			id: uuidv4(),
 			nome: 'Nicolas',
 			cargo: 'Front-End Developer',
 			imagem: 'https://randomuser.me/api/portraits/men/52.jpg',
-			time: 'Devops'
+			timeId: times[5].id
+		},
+		{
+			id: uuidv4(),
+			nome: 'Natasha',
+			cargo: 'Front-End Developer',
+			imagem: 'https://randomuser.me/api/portraits/women/51.jpg',
+			timeId: times[5].id
+		},
+		{
+			id: uuidv4(),
+			nome: 'Fred',
+			cargo: 'Front-End Developer',
+			imagem: 'https://randomuser.me/api/portraits/men/51.jpg',
+			timeId: times[6].id
+		},
+		{
+			id: uuidv4(),
+			nome: 'Barbara',
+			cargo: 'Front-End Developer',
+			imagem: 'https://randomuser.me/api/portraits/women/61.jpg',
+			timeId: times[6].id
+		},
+		{
+			id: uuidv4(),
+			nome: 'Taina',
+			cargo: 'Front-End Developer',
+			imagem: 'https://randomuser.me/api/portraits/women/11.jpg',
+			timeId: times[6].id
 		},
 	])
 
 	const aoNovoColaboradorAdicionado = (colaborador) => {
-		debugger
+		// debugger
 		console.log(colaborador)
 		setColaboradores([...colaboradores, colaborador])
 	}
 
-	function deletarColaborador(){
-		console.log('deletar')
+	function deletarColaborador(id){
+		setColaboradores(colaboradores.filter((colaborador) => colaborador.id !== id))
 	}
 
-	function mudarCorDoTime(cor, nome) {
+	function mudarCorDoTime(cor, id) {
 		setTimes(times.map(time =>{
-			if(time.nome === nome){
+			if(time.id === id){
 				time.cor = cor;
 			}
 			return time;
@@ -143,14 +189,15 @@ function App() {
 	return (
 		<div className="App">
 			<Banner />	
-			<Formulario times={times.map(item => item.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
+			<Formulario times={times.map(item => ({id: item.id, nome: item.nome }))} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
 			{times.map(time => <Time 
+			id={time.id}
 			nome={time.nome} 
 			cor={time.cor} 
-			colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+			colaboradores={colaboradores.filter(colaborador => colaborador.timeId === time.id)}
 			aoDeletar={deletarColaborador}
 			mudarCor={mudarCorDoTime}
-			key={time.nome} />)}
+			key={time.id} />)}
 			<Rodape />	
 		</div>
 	);
